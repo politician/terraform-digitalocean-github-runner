@@ -27,7 +27,7 @@ variable "do_project_id" {
 variable "ubuntu_version" {
   description = "Ubuntu version to use (regex). The default regex will make sure the image is the latest LTS on each Terraform apply. Here's a [list of the available versions](https://do-community.github.io/available-images/) if you want to test your regex."
   type        = string
-  default     = "1.*\\(LTS\\) x64$" // Latest LTS image
+  default     = "\\(LTS\\) x64$" // Latest LTS image
 }
 
 variable "droplet_size_slug" {

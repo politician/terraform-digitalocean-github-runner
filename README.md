@@ -1,4 +1,4 @@
-# terraform-null-normalize
+# terraform-digitalocean-github-runner
 
 Create a GitHub Actions runner on a DigitalOCean droplet.
 
@@ -15,7 +15,7 @@ Create a GitHub Actions runner on a DigitalOCean droplet.
 | <a name="input_droplet_size_slug"></a> [droplet\_size\_slug](#input\_droplet\_size\_slug) | Droplet size slug. Leaving empty will use the cheapest droplet. [More info](https://www.digitalocean.com/docs/droplets/sizes). | `string` | `null` | no |
 | <a name="input_region"></a> [region](#input\_region) | Define which region to use. [More info](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters). | `string` | `"nyc1"` | no |
 | <a name="input_runner_name"></a> [runner\_name](#input\_runner\_name) | Name of the runner. | `string` | `null` | no |
-| <a name="input_ubuntu_version"></a> [ubuntu\_version](#input\_ubuntu\_version) | Ubuntu version to use (regex). The default regex will make sure the image is the latest LTS on each Terraform apply. Here's a [list of the available versions](https://do-community.github.io/available-images/) if you want to test your regex. | `string` | `"1.*\\(LTS\\) x64$"` | no |
+| <a name="input_ubuntu_version"></a> [ubuntu\_version](#input\_ubuntu\_version) | Ubuntu version to use (regex). The default regex will make sure the image is the latest LTS on each Terraform apply. Here's a [list of the available versions](https://do-community.github.io/available-images/) if you want to test your regex. | `string` | `"\\(LTS\\) x64$"` | no |
 
 ## Outputs
 
